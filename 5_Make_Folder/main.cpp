@@ -20,15 +20,39 @@ using namespace std;
 int main() {
    Triangle triangle1;
    Triangle triangle2;
+   double base1, base2, height1, height2;
 
    // TODO: Read and set base and height for triangle1 (use SetBase() and SetHeight())
+   cout << "triangle1 height: \n";
+   cin >> height1;
+
+   cout << "triangle1 Base: \n";
+   cin >> base1;
+
+   triangle1.SetBase(base1);
+   triangle1.SetHeight(height1);
+
       
    // TODO: Read and set base and height for triangle2 (use SetBase() and SetHeight())
+   cout << "triangle2 height: \n";
+   cin >> height2;
+
+   cout << "triangle2 Base: \n";
+   cin >> base2;
+
+   triangle2.SetBase(base2);
+   triangle2.SetHeight(height2);
+
        
+   cout << triangle2.GetArea() << "\n";
    cout << "Triangle with smaller area:" << endl;
-   
-   // TODO: Determine smaller triangle (use GetArea())  
-   //       and output smaller triangle's info (use PrintInfo())
+  
+   if (triangle1.GetArea() < triangle2.GetArea()) {
+        triangle1.PrintInfo();
+    } 
+   else {
+        triangle2.PrintInfo();
+   }
    
    return 0;
 }
